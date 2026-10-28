@@ -269,13 +269,13 @@ async def on_message(message):
         elif any(phrase in contenu_texte for phrase in ["how much downloads is ecds", "downloads ecds"]):
             reponse = "1 billon 🔥"
         elif any(phrase in contenu_texte for phrase in ["why your name is like that", "what mean axesinmotion", "what is axesinmotion"]):
-            reponse = "i have the best name that's it 😏"
+            reponse = random.choice(["i have the best name that's it 😏", it's the best enterprise name 4ever!"])
         elif any(phrase in contenu_texte for phrase in ["really", "for real", "that's real", "are you serious"]):
             reponse = random.choice(["yeah🤌", "oh yeah 🔥", "yes brother"])
         elif any(phrase in contenu_texte for phrase in ["ok", "ah", "oh", "okay"]):
             reponse = random.choice(["🙃", "👀", "👍"])
         elif any(phrase in contenu_texte for phrase in ["huh", "huhh", "what"]):
-            reponse = random.choice(["hehe", "jk", "🤌"]))
+            reponse = random.choice(["hehe", "jk", "🤌"])
 
         if reponse:
             await message.channel.send(reponse)
