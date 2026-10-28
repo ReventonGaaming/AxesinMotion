@@ -103,14 +103,13 @@ async def on_message(message):
             reponse = random.choice(["🙃", "👀", "👍"])
         elif any(phrase in contenu_texte for phrase in ["huh", "huhh", "what"]):
             reponse = random.choice(["hehe", "jk", "🤌"])
-        elif "yo" in contenu_texte:
-            reponse = random.choice(["yo!", "hi, what's up ?", "hey!"])
         elif any(phrase in contenu_texte for phrase in ["8.0 out ?", "new ecds update ?"]):
             reponse = random.choice(["later, but peak update will coming 😏",
                 "i just can tell you the update will be peak!"])
-        elif "yes" in contenu_texte:
+        elif "yo" in contenu_texte:
+            reponse = random.choice(["yo!", "hi, what's up ?", "hey!"])elif "yes" in contenu_texte:
             reponse = random.choice(["w", "ok", "okay"])
-        elif "e" in contenu_texte:
+        elif any(phrase in contenu_texte for phrase in ["e", "E"]):
             reponse = random.choice(["eee", "E"])
         elif "no" in contenu_texte:
             reponse = random.choice(["k", "😶", "L"])
@@ -169,116 +168,7 @@ def run_server():
     server = HTTPServer(("0.0.0.0", port), SimpleHandler)
     server.serve_forever()
 
-threading.Thread(target=run_server, daemon=True).start()
-
-# ==========================================
-# 2. CONFIGURATION DU BOT DISCORD
-# ==========================================
-intents = discord.Intents.default()
-intents.message_content = True
-
-bot = commands.Bot(command_prefix='!', intents=intents)
-
-@bot.event
-async def on_ready():
-    # Synchronisation des commandes slash sur Discord
-    try:
-        synced = await bot.tree.sync()
-        print(f"Commandes slash synchronisées : {len(synced)}")
-    except Exception as e:
-        print(f"Erreur de synchronisation : {e}")
-    print(f'Connecté en tant que {bot.user.name} !')
-
-# ==========================================
-# 3. GESTION DES MESSAGES AUTOMATIQUES
-# ==========================================
-@bot.event
-async def on_message(message):
-    # Ignorer les messages envoyés par le bot lui-même
-    if message.author == bot.user:
-        return
-
-    contenu_texte = message.content.lower()
-
-    # Le bot réagit s'il est mentionné ou si "axesinmotion" / des mots clés sont dans le texte
-    is_mentioned = bot.user in message.mentions
-    has_keyword = "axesinmotion" in contenu_texte
-
-    if is_mentioned or has_keyword:
-        reponse = None
-
-        if "how are you" in contenu_texte:
-            reponse = random.choice([
-                "good, i'm happy cause ecds hit 1b downloads recently",
-                "felling good, my team is so peak btw 😏",
-                "sure",
-                "sure 🤝"
-            ])
-        elif "i need something" in contenu_texte:
-            reponse = "tell me 🪎"
-        elif "what game you like the most" in contenu_texte:
-            reponse = random.choice([
-                "ecds, that's so peak!",
-                "extreme car driving simulator, for sure!"
-            ])
-        elif any(phrase in contenu_texte for phrase in [
-            "what you think about multi-verse driving simulator",
-            "do you like multi-verse driving simulator",
-            "do you like mvds",
-            "what you think about mvds",
-            "is multi-verse driving simulator your friend",
-            "is mvds your friend"
-        ]):
-            reponse = random.choice([
-                "huhhh, yeah i i like it",
-                "oiia oiia",
-                "never heard that game",
-                "bro mvds is my bessst friend"
-            ])
-        elif any(phrase in contenu_texte for phrase in ["what is ecds", "what's ecds"]):
-            reponse = random.choice([
-                "the best game 4ever 😏",
-                "a car game, better than all the others xD (even mvds)"
-            ])
-        elif any(phrase in contenu_texte for phrase in ["how much downloads is ecds", "downloads ecds"]):
-            reponse = "1 billon 🔥"
-        elif any(phrase in contenu_texte for phrase in ["why your name is like that", "what mean axesinmotion", "what is axesinmotion"]):
-            reponse = random.choice(["i have the best name that's it 😏", "it's the best enterprise name forever!"])
-        elif any(phrase in contenu_texte for phrase in ["really", "for real", "that's real", "are you serious"]):
-            reponse = random.choice(["yeah🤌", "oh yeah 🔥", "yes brother"])
-        elif any(phrase in contenu_texte for phrase in ["ok", "ah", "oh", "okay"]):
-            reponse = random.choice(["🙃", "👀", "👍"])
-        elif any(phrase in contenu_texte for phrase in ["huh", "huhh", "what"]):
-            reponse = random.choice(["hehe", "jk", "🤌"])
-
-        if reponse:
-            await message.channel.send(reponse)
-
-    await bot.process_commands(message)
-
-# ==========================================
-# 4. COMMANDES SLASH
-# ==========================================
-@bot.tree.command(name="ping", description="Vérifie la latence du bot")
-async def ping(interaction: discord.Interaction):
-    latency = round(bot.latency * 1000)
-    await interaction.response.send_message(f"Pong ! Latence de la passerelle : {latency} ms.")
-
-@bot.tree.command(name="greeting", description="Dis bonjour au bot")
-async def bonjour(interaction: discord.Interaction):
-    await interaction.response.send_message("hi, i'm axesinmotionxD, let's chat!")
-
-@bot.tree.command(name="mvds", description="Affiche ce que pense le bot du jeu mvds")
-async def mvds_cmd(interaction: discord.Interaction):
-    await interaction.response.send_message("mvds ? Humm i think it's a pretty good game, but ecds have 1b downloads, so mvds is cook xD")
-
-@bot.tree.command(name="axesinmotion", description="Affiche ce qu'est axesinmotion, selon lui")
-async def axesinmotion_cmd(interaction: discord.Interaction):
-    await interaction.response.send_message("is the best game enterprise, the youtuber vicky lol gaming is famous because of it, and is known throughout the entire world 🗿!")
-
-# ==========================================
-# 5. LANCEMENT DU BOT
-# ==========================================
+threading.Thread(target=run_server, daemon=True).start
 
 # Base de données complète des pays par continent
 QUIZ_DATA = {
@@ -396,7 +286,7 @@ async def on_ready():
     print(e)
 
 
-@tree.command(name="ping", description="Check bot latency")
+@bot.tree.command(name="ping", description="Check bot latency")
 async def ping(interaction: discord.Interaction):
   latency = round(bot.latency * 1000)
   await interaction.response.send_message(
@@ -404,14 +294,14 @@ async def ping(interaction: discord.Interaction):
   )
 
 
-@tree.command(name="greeting", description="Greet the bot")
+@bot.tree.command(name="greeting", description="Greet the bot")
 async def greeting(interaction: discord.Interaction):
   await interaction.response.send_message(
       f"Hi, I'm {client.user.name}, let's chat!"
   )
 
 
-@tree.command(name="quiz", description="Play a multiplayer capital quiz!")
+@bot.tree.command(name="quiz", description="Play a multiplayer capital quiz!")
 @app_commands.describe(
     rounds="Number of rounds (max 30, default 10)",
     timeout="Time per question in seconds (max 30, default 10)",
