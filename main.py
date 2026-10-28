@@ -79,19 +79,16 @@ async def on_message(message):
             "do you like mvds",
             "what you think about mvds",
             "is multi-verse driving simulator your friend",
-            "is mvds your friend"
-        ]):
+            "is mvds your friend"]):
             reponse = random.choice([
                 "huhhh, yeah i i like it",
                 "oiia oiia",
                 "never heard that game",
-                "bro mvds is my bessst friend"
-            ]) 
+                "bro mvds is my bessst friend"]) 
         elif any(phrase in contenu_texte for phrase in ["what is ecds", "what's ecds"]):
             reponse = random.choice([
                 "the best game 4ever 😏",
-                "a car game, better than all the others xD (even mvds)"
-            ])
+                "a car game, better than all the others xD (even mvds)"])
         elif any(phrase in contenu_texte for phrase in ["how much downloads is ecds", "downloads ecds"]):
             reponse = "1 billon 🔥"
         elif any(phrase in contenu_texte for phrase in ["why your name is like that", "what mean axesinmotion", "what is axesinmotion"]):
@@ -284,22 +281,6 @@ async def on_ready():
     print(f"Synced {len(synced)} command(s)")
   except Exception as e:
     print(e)
-
-
-@bot.tree.command(name="ping", description="Check bot latency")
-async def ping(interaction: discord.Interaction):
-  latency = round(bot.latency * 1000)
-  await interaction.response.send_message(
-      f"Pong! Gateway latency: {latency} ms."
-  )
-
-
-@bot.tree.command(name="greeting", description="Greet the bot")
-async def greeting(interaction: discord.Interaction):
-  await interaction.response.send_message(
-      f"Hi, I'm {client.user.name}, let's chat!"
-  )
-
 
 @bot.tree.command(name="quiz", description="Play a multiplayer capital quiz!")
 @app_commands.describe(
