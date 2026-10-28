@@ -112,6 +112,8 @@ async def on_message(message):
             reponse = random.choice(["helloo", "yo" or "hey!"])
         elif "lagaxesinmotion2" in contenu_texte :
             reponse = "eeeelaaaaaggdhhglgflfghhh"
+        elif any(phrase in contenu_texte for phrase in [lol, lool, lmao, lmfao]):
+            reponse = random.choice(["hehe" or "😎"])
         else:
             # Réponse par défaut
             reponse = random.choice([
