@@ -57,7 +57,7 @@ async def on_message(message):
     is_mentioned = bot.user in message.mentions
     has_keyword = "axesinmotion" in contenu_texte
 
-        if is_mentioned or has_keyword:
+    if is_mentioned or has_keyword:
         reponse = None
 
         elif "how are you" in contenu_texte:
