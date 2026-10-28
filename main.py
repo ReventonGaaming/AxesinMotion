@@ -414,9 +414,9 @@ QUIZ_DATA = {
 }
 
 
-@client.event
+@bot.event
 async def on_ready():
-  print(f"Logged in as {client.user} (ID: {client.user.id})")
+  print(f"Logged in as {bot.user} (ID: {bot.user.id})")
   try:
     synced = await tree.sync()
     print(f"Synced {len(synced)} command(s)")
@@ -426,7 +426,7 @@ async def on_ready():
 
 @tree.command(name="ping", description="Check bot latency")
 async def ping(interaction: discord.Interaction):
-  latency = round(client.latency * 1000)
+  latency = round(bot.latency * 1000)
   await interaction.response.send_message(
       f"Pong! Gateway latency: {latency} ms."
   )
