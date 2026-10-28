@@ -60,7 +60,7 @@ async def on_message(message):
     if is_mentioned or has_keyword:
         reponse = None
 
-        elif "how are you" in contenu_texte:
+        if "how are you" in contenu_texte:
             reponse = random.choice([
                 "good, i'm happy cause ecds hit 1b downloads recently",
                 "felling good, my team is so peak btw 😏",
