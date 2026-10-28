@@ -275,8 +275,7 @@ async def on_message(message):
         elif any(phrase in contenu_texte for phrase in ["ok", "ah", "oh", "okay"]):
             reponse = random.choice(["🙃", "👀", "👍"])
         elif any(phrase in contenu_texte for phrase in ["huh", "huhh", "what"]):
-            reponse = random.choice(["hehe", "jk", "🤌"])
-            ])
+            reponse = random.choice(["hehe", "jk", "🤌"]))
 
         if reponse:
             await message.channel.send(reponse)
