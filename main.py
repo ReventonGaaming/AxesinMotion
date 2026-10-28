@@ -306,7 +306,7 @@ async def axesinmotion_cmd(interaction: discord.Interaction):
 # 5. LANCEMENT DU BOT
 # ==========================================
 
-tree = app_commands.CommandTree(client)
+tree = app_commands.CommandTree(bot)
 
 # Base de données complète des pays par continent
 QUIZ_DATA = {
