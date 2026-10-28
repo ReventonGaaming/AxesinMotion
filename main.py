@@ -1,5 +1,4 @@
 import os
-import os
 import random
 import threading
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -107,7 +106,8 @@ async def on_message(message):
             reponse = random.choice(["later, but peak update will coming 😏",
                 "i just can tell you the update will be peak!"])
         elif "yo" in contenu_texte:
-            reponse = random.choice(["yo!", "hi, what's up ?", "hey!"])elif "yes" in contenu_texte:
+            reponse = random.choice(["yo!", "hi, what's up ?", "hey!"])
+        elif "yes" in contenu_texte:
             reponse = random.choice(["w", "ok", "okay"])
         elif any(phrase in contenu_texte for phrase in ["e", "E"]):
             reponse = random.choice(["eee", "E"])
