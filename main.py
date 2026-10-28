@@ -139,7 +139,7 @@ async def bonjour(interaction: discord.Interaction):
 
 @bot.tree.command(name="mvds", description="Affiche ce que pense le bot du jeu mvds")
 async def mvds_cmd(interaction: discord.Interaction):
-    await interaction.response.send_message("mvds ? Humm i think it's a pretty good game, but ecds have 1b downloads, so mvds is cook xD")
+    await interaction.response.send_message("mvds ? Humm i think it's a pretty good game, but ecds have 1b downloads, so that game is cook xD")
 
 @bot.tree.command(name="axesinmotion", description="Affiche ce qu'est axesinmotion, selon lui")
 async def axesinmotion_cmd(interaction: discord.Interaction):
