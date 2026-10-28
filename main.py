@@ -144,6 +144,66 @@ async def mvds_cmd(interaction: discord.Interaction):
 @bot.tree.command(name="axesinmotion", description="Affiche ce qu'est axesinmotion, selon lui")
 async def axesinmotion_cmd(interaction: discord.Interaction):
     await interaction.response.send_message("is the best game enterprise, the youtuber vicky lol gaming is famous because of it, and is known throughout the entire world 🗿!")
+    
+    import asyncio
+import random
+
+# Your quiz questions database (Country : Capital)
+QUESTIONS_QUIZ = {
+    "france": "paris",
+    "germany": "berlin",
+    "spain": "madrid",
+    "italy": "rome",
+    "japan": "tokyo"
+}
+
+@bot.tree.command(name="quiz", description="Play a capital quiz without duplicate questions!")
+async def quiz_cmd(interaction: discord.Interaction):
+    # Create a copy of the available countries for this specific game session
+    available_countries = list(QUESTIONS_QUIZ.keys())
+    
+    # Number of questions per game session (e.g., 3 questions)
+    number_of_questions = 3
+    score = 0
+    
+    await interaction.response.send_message("🎮 **Quiz Started!** Get ready for some questions...")
+
+    def check(m):
+        return m.channel == interaction.channel and not m.author.bot
+
+    for i in range(number_of_questions):
+        if not available_countries:
+            break # Stop if there are no countries left
+            
+        # Pick a random country from the remaining ones
+        country = random.choice(available_countries)
+        
+        # IMPORTANT: Remove it from the list so it won't repeat in this game!
+        available_countries.remove(country)
+        
+        expected_capital = QUESTIONS_QUIZ[country]
+        
+        # Ask the question
+        await interaction.followup.send(f"🌍 **Question {i+1}** : What is the capital of **{country}**? *(You have 15 seconds!)*")
+        
+        try:
+            user_message = await bot.wait_for('message', timeout=15.0, check=check)
+            
+            if user_message.content.lower() == expected_capital:
+                score += 1
+                await interaction.followup.send(f"🎉 Correct answer! (+1 point)")
+            else:
+                await interaction.followup.send(f"❌ Incorrect! The correct answer was **{expected_capital}**.")
+                
+        except asyncio.TimeoutError:
+            await interaction.followup.send(f"⏰ Time's up! Nobody answered. The correct answer was **{expected_capital}**.")
+            
+        # Small 2-second pause before the next question
+        await asyncio.sleep(2)
+
+    # End of the quiz
+    await interaction.followup.send(f"🏆 **Quiz Over!** Final score: **{score}/{number_of_questions}**")
+    
 
 # ==========================================
 # 5. LANCEMENT DU BOT
