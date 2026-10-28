@@ -507,7 +507,7 @@ async def quiz(
 
     try:
       while True:
-        msg = await client.wait_for("message", check=check, timeout=float(timeout))
+        msg = await bot.wait_for("message", check=check, timeout=float(timeout))
         if msg.content.strip().lower() == capital.lower():
           player = msg.author
           scores[player] = scores.get(player, 0) + 1
