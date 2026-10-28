@@ -74,7 +74,7 @@ async def on_message(message):
                 "ecds, that's so peak!",
                 "extreme car driving simulator, for sure!"
             ])
-        elif any(phrase in contenu_texte for phrase in [
+               elif any(phrase in contenu_texte for phrase in [
             "what you think about multi-verse driving simulator",
             "do you like multi-verse driving simulator",
             "do you like mvds",
@@ -87,7 +87,7 @@ async def on_message(message):
                 "oiia oiia",
                 "never heard that game",
                 "bro mvds is my bessst friend"
-            ])
+            ]) 
         elif any(phrase in contenu_texte for phrase in ["what is ecds", "what's ecds"]):
             reponse = random.choice([
                 "the best game 4ever 😏",
