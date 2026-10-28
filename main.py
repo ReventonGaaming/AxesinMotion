@@ -106,18 +106,17 @@ async def on_message(message):
             reponse = random.choice(["yo!", "hi, what's up ?", "hey!"])
         elif "yes" in contenu_texte:
             reponse = random.choice(["w", "ok", "okay"])
-        elif any(phrase in contenu_texte for phrase in ["e", "E"]):
-            reponse = random.choice(["eee", "E"])
         elif "no" in contenu_texte:
             reponse = random.choice(["k", "😶", "L"])
-        elif "hi" in contenu_texte or "hello" in contenu_texte:
-            reponse = random.choice(["helloo", "yo"])
+        elif any(phrase in contenu_texte for phrase in ["hi", "hello", "hey"]): in contenu_texte:
+            reponse = random.choice(["helloo", "yo" or "hey!"])
         else:
             # Réponse par défaut
             reponse = random.choice([
-                "hey; do you want to talking",
+                "yo, do you want to talking",
                 "did you pinged me ?",
-                "Hey 👋"
+                "Hey 👋",
+                "did someone pinged me ?"
             ])
 
         if reponse:
