@@ -310,9 +310,8 @@ async def axesinmotion_cmd(interaction: discord.Interaction):
 TOKEN = os.getenv("DISCORD_TOKEN")
 bot.run(TOKEN)
         elif any(phrase in contenu_texte for phrase in ["8.0 out ?", "new ecds update ?"]):
-            reponse = random.choice([
-                "later, but peak update will coming 😏",
-                "i just can tell you the update will be peak!
+            reponse = random.choice(["later, but peak update will coming 😏",
+                "i just can tell you the update will be peak!])
         elif "yes" in contenu_texte:
             reponse = random.choice(["w", "ok", "okay"])
         elif "e" in contenu_texte:
