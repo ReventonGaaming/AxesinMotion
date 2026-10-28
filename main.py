@@ -57,10 +57,10 @@ async def on_message(message):
     is_mentioned = bot.user in message.mentions
     has_keyword = "axesinmotion" in contenu_texte
 
-    if is_mentioned or has_keyword:
+        elif is_mentioned or has_keyword:
         reponse = None
 
-        if "how are you" in contenu_texte:
+        elif "how are you" in contenu_texte:
             reponse = random.choice([
                 "good, i'm happy cause ecds hit 1b downloads recently",
                 "felling good, my team is so peak btw 😏",
