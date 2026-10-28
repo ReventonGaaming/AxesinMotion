@@ -108,7 +108,7 @@ async def on_message(message):
             reponse = random.choice(["w", "ok", "okay"])
         elif "no" in contenu_texte:
             reponse = random.choice(["k", "😶", "L"])
-        elif any(phrase in contenu_texte for phrase in ["hi", "hello", "hey"]): in contenu_texte:
+        elif any(phrase in contenu_texte for phrase in ["hi", "hello", "hey"]):
             reponse = random.choice(["helloo", "yo" or "hey!"])
         else:
             # Réponse par défaut
