@@ -170,32 +170,6 @@ def run_server():
     server.serve_forever()
 
 threading.Thread(target=run_server, daemon=True).start()
-import asyncio
-import os
-import os
-import random
-import threading
-from http.server import HTTPServer, BaseHTTPRequestHandler
-import discord
-from discord.ext import commands
-from discord import app_commands
-
-# ==========================================
-# 1. MINI SERVEUR WEB (Pour Render 24/7)
-# ==========================================
-class SimpleHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header("Content-type", "text/plain")
-        self.end_headers()
-        self.wfile.write(b"AxesInMotion Bot is alive!")
-
-def run_server():
-    port = int(os.environ.get("PORT", 10000))
-    server = HTTPServer(("0.0.0.0", port), SimpleHandler)
-    server.serve_forever()
-
-threading.Thread(target=run_server, daemon=True).start()
 
 # ==========================================
 # 2. CONFIGURATION DU BOT DISCORD
@@ -305,8 +279,6 @@ async def axesinmotion_cmd(interaction: discord.Interaction):
 # ==========================================
 # 5. LANCEMENT DU BOT
 # ==========================================
-
-tree = app_commands.CommandTree(bot)
 
 # Base de données complète des pays par continent
 QUIZ_DATA = {
