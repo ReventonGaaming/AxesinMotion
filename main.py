@@ -104,7 +104,16 @@ async def on_message(message):
         elif any(phrase in contenu_texte for phrase in ["huh", "huhh", "what"]):
             reponse = random.choice(["hehe", "jk", "🤌"])
         elif "yo" in contenu_texte:
-            reponse = random.choice(["feeling good 🪎", "hi, what's up ?", "hey!"])
+            reponse = random.choice(["yo!", "hi, what's up ?", "hey!"])
+        elif any(phrase in contenu_texte for phrase in ["8.0 out ?", "new ecds update ?"]):
+            reponse = random.choice(["later, but peak update will coming 😏",
+                "i just can tell you the update will be peak!"])
+        elif "yes" in contenu_texte:
+            reponse = random.choice(["w", "ok", "okay"])
+        elif "e" in contenu_texte:
+            reponse = random.choice(["eee", "E"])
+        elif "no" in contenu_texte:
+            reponse = random.choice(["k", "😶", "L"])
         elif "hi" in contenu_texte or "hello" in contenu_texte:
             reponse = random.choice(["helloo", "yo"])
         else:
@@ -144,7 +153,7 @@ async def axesinmotion_cmd(interaction: discord.Interaction):
 # 5. LANCEMENT DU BOT
 # ==========================================
 TOKEN = os.getenv("DISCORD_TOKEN")
-bot.run(TOKEN)
+
 import threading
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
@@ -267,16 +276,6 @@ async def on_message(message):
             reponse = random.choice(["🙃", "👀", "👍"])
         elif any(phrase in contenu_texte for phrase in ["huh", "huhh", "what"]):
             reponse = random.choice(["hehe", "jk", "🤌"])
-        elif "yo" in contenu_texte:
-            reponse = random.choice(["feeling good 🪎", "hi, what's up ?", "hey!"])
-        elif "hi" in contenu_texte or "hello" in contenu_texte:
-            reponse = random.choice(["helloo", "yo"])
-        else:
-            # Réponse par défaut
-            reponse = random.choice([
-                "hey; do you want to talking",
-                "did you pinged me ?",
-                "Hey 👋"
             ])
 
         if reponse:
@@ -307,25 +306,7 @@ async def axesinmotion_cmd(interaction: discord.Interaction):
 # ==========================================
 # 5. LANCEMENT DU BOT
 # ==========================================
-TOKEN = os.getenv("DISCORD_TOKEN")
-bot.run(TOKEN)
-        elif any(phrase in contenu_texte for phrase in ["8.0 out ?", "new ecds update ?"]):
-            reponse = random.choice(["later, but peak update will coming 😏",
-                "i just can tell you the update will be peak!"])
-        elif "yes" in contenu_texte:
-            reponse = random.choice(["w", "ok", "okay"])
-        elif "e" in contenu_texte:
-            reponse = random.choice(["eee", "E"])
-        elif "no" in contenu_texte:
-            reponse = random.choice(["k", "😶", "L"])
-import random
-import discord
-from discord import app_commands
 
-intents = discord.Intents.default()
-intents.message_content = True
-
-client = discord.Client(intents=intents)
 tree = app_commands.CommandTree(client)
 
 # Base de données complète des pays par continent
@@ -560,5 +541,4 @@ async def quiz(
 
 
 # Récupération sécurisée du token via les variables d'environnement
-TOKEN = os.getenv("DISCORD_TOKEN")
-client.run(TOKEN)
+bot.run(TOKEN)
