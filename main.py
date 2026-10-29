@@ -151,13 +151,13 @@ async def on_message(message):
         elif any(phrase in contenu_texte for phrase in ["8.0 out ?", "new ecds update ?"]):
             reponse = random.choice(["later, but peak update will coming 😏",
                 "i just can tell you the update will be peak!"])
-        elif "yo axesinmotion" in contenu_texte:
+        elif "yoo" in contenu_texte:
             reponse = random.choice(["yo!", "hi, what's up ?", "hey!"])
         elif "yes" in contenu_texte:
             reponse = random.choice(["w", "ok", "okay"])
         elif "no" in contenu_texte:
             reponse = random.choice(["k", "😶", "L"])
-        elif any(phrase in contenu_texte for phrase in ["hi axesinmotion", "hello axesinmotion", "hey axesinmotion"]):
+        elif any(phrase in contenu_texte for phrase in ["hello axesinmotion", "hey axesinmotion"]):
             reponse = random.choice(["helloo", "yo" or "hey!"])
         elif "lagaxesinmotion3" in contenu_texte :
             reponse = "eeee_laaaaagg!!!!-------eEeEEE"
