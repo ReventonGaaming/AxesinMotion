@@ -147,7 +147,7 @@ async def on_message(message):
             reponse = "me!"
         elif "capital of ecds" in contenu_texte:
             reponse = "axesinmotion 😏"
-        elif any(phrase in contenu_texte for phrase in ["are you the real creator of ecds", "is that the creator of ecds acc"]):
+        elif any(phrase in contenu_texte for phrase in ["Are you the creator of ecds", "is that the creator of ecds acc"]):
             réponse = random.choice(["i'm not the real axesinmotion, the best bot version of him!", "dude, i'm AxesinMotionxD, the best bot forever XD"])
         else:
             # Réponse par défaut
