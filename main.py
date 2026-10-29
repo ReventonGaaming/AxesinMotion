@@ -115,7 +115,7 @@ async def on_message(message):
             reponse = "tell me 🪎"
         elif any(phrase in contenu_texte for phrase in ["what game you like the most", "what's your favorite game"]):
             reponse = random.choice(["ecds, that's so peak!", "extreme car driving simulator, for sure!"])
-        elif any(phrase in contenu_texte for phrase in ["what you think about multi-verse driving simulator","do you like multi-verse driving simulator","do you like mvds", "what you think about mvds"]):
+        elif any(phrase in contenu_texte for phrase in ["what you think about multi-verse driving simulator","do you like multi-verse driving simulator","do you like mvds", "what do you think about mvds"]):
             reponse = random.choice(["huhhh, yeah i i like it", "bro never heard that game", "bro mvds is my bessst friend"]) 
         elif any(phrase in contenu_texte for phrase in ["what is ecds", "what's ecds"]):
             reponse = random.choice(["the best game 4ever 😏", "a car game, better than all the others xD (even mvds)"])
