@@ -119,42 +119,41 @@ async def on_message(message):
         elif "i need something" in contenu_texte:
             reponse = "tell me 🪎"
         elif any(phrase in contenu_texte for phrase in ["what game you like the most", "what's your favorite game"]):
-            reponse = random.choice(["ecds, that's so peak!","extreme car driving simulator, for sure!"])
-        elif any(phrase in contenu_texte for phrase in ["what you think about multi-verse driving simulator","do you like multi-verse driving simulator","do you like mvds" or "what you think about mvds"]):
-            reponse = random.choice(["huhhh, yeah i i like it", "bro never heard that game", "bro mvds is my bessst friend"]) 
-        elif any(phrase in contenu_texte for phrase in ["what is ecds" or "what's ecds"]):
-            reponse = random.choice(["the best game 4ever 😏","a car game, better than all the others xD (even mvds)"])
-        elif any(phrase in contenu_texte for phrase in ["how much downloads is ecds" or "downloads ecds"]):
+            reponse = random.choice(["ecds, that's so peak!" or "extreme car driving simulator, for sure!"])
+        elif any(phrase in contenu_texte for phrase in ["what you think about multi-verse driving simulator","do you like multi-verse driving simulator","do you like mvds", "what you think about mvds"]):
+            reponse = random.choice(["huhhh, yeah i i like it", "bro never heard that game" or "bro mvds is my bessst friend"]) 
+        elif any(phrase in contenu_texte for phrase in ["what is ecds", "what's ecds"]):
+            reponse = random.choice(["the best game 4ever 😏" or "a car game, better than all the others xD (even mvds)"])
+        elif any(phrase in contenu_texte for phrase in ["how much downloads is ecds", "downloads ecds"]):
             reponse = "1 billon 🔥"
-        elif any(phrase in contenu_texte for phrase in ["why your name is like that" or "what mean axesinmotion"]):
+        elif any(phrase in contenu_texte for phrase in ["why your name is like that", "what mean axesinmotion"]):
             reponse = "that's the best name, that's it 😏"
-        elif any(phrase in contenu_texte for phrase in ["really", "for real", "that's real" or "are you serious"]):  
-            reponse = random.choice(["yeah🤌", "oh yeah 🔥", "yes brother"])
-        elif any(phrase in contenu_texte for phrase in ["ok bro" or "okay axesinmotion"]):
-            reponse = random.choice(["🙃", "👀", "👍"])
-        elif any(phrase in contenu_texte for phrase in ["huhh" or "what"]):
-            reponse = random.choice(["hehe", "jk", "🤌"])
-        elif any(phrase in contenu_texte for phrase in ["8.0 out ?" or "new ecds update ?"]):
-            reponse = random.choice(["later, but peak update will coming 😏",
-                "i just can tell you the update will be peak!"])
+        elif any(phrase in contenu_texte for phrase in ["really", "for real", "that's real", "are you serious"]):  
+            reponse = random.choice(["yeah🤌", "oh yeah 🔥" or "yes brother"])
+        elif any(phrase in contenu_texte for phrase in ["ok bro", "okay axesinmotion"]):
+            reponse = random.choice(["🙃", "👀" or "👍"])
+        elif any(phrase in contenu_texte for phrase in ["huhh", "what wdym"]):
+            reponse = random.choice(["hehe", "jk" or "🤌"])
+        elif any(phrase in contenu_texte for phrase in ["8.0 out ?", "new ecds update ?"]):
+            reponse = random.choice(["later, but peak update will coming 😏" or "i just can tell you the update will be peak!"])
         elif "yoo" in contenu_texte:
             reponse = random.choice(["yo!", "hi, what's up ?" or "hey!"])
         elif "yess" in contenu_texte:
-            reponse = random.choice(["w", "ok", "okay"])
+            reponse = random.choice(["w", "ok" or "okay"])
         elif "no bro" in contenu_texte:
-            reponse = random.choice(["k", "😶", "L"])
-        elif any(phrase in contenu_texte for phrase in ["hello aim" or "hey aim"]):
+            reponse = random.choice(["k", "😶" or "L"])
+        elif any(phrase in contenu_texte for phrase in ["hello aim", "hey aim"]):
             reponse = random.choice(["helloo", "yo" or "hey!"])
         elif "lagaxesinmotion3" in contenu_texte :
             reponse = "eeee_laaaaagg!!!!-------eEeEEE"
-        elif any(phrase in contenu_texte for phrase in ["lol wdym", "lmao" or "lmfao"]):
+        elif any(phrase in contenu_texte for phrase in ["lol wdym", "lmao", "lmfao"]):
             reponse = random.choice(["hehe" or "😎"])
         elif "capital of axesinmotion" in contenu_texte:
             reponse = "me!"
         elif "capital of ecds" in contenu_texte:
             reponse = "axesinmotion 😏"
-        elif any(phrase in contenu_texte for phrase in ["is that axesinmotion", "is that the axesinmotion acc" or "are you axesinmotion"]):
-            random.choice(["i'm not the real axesinmotion, the best bot version of him!", "dude, i'm AxesinMotionxD, the best bot forever XD"])
+        elif any(phrase in contenu_texte for phrase in ["are you axesinmotion", "is that the axesinmotion acc"]):
+            random.choice(["i'm not the real axesinmotion, the best bot version of him!" or "dude, i'm AxesinMotionxD, the best bot forever XD"])
         else:
             # Réponse par défaut
             reponse = random.choice(["yo, do you want to talking","did you pinged me ?","Hey 👋" or "did someone pinged me ?"])
@@ -176,7 +175,7 @@ async def bonjour(interaction: discord.Interaction):
     await interaction.response.send_message("hi, i'm axesinmotionxD, let's chat!")
 @bot.tree.command(name="mvds", description="Affiche ce que pense le bot du jeu mvds")
 async def mvds_cmd(interaction: discord.Interaction):
-    await interaction.response.send_message("mvds ? Humm i think it's a pretty good game, but ecds have 1b downloads, so that game is cook xD")
+    await interaction.response.send_message("mvds ? Humm i think it's a pretty good game, but ecds is 1b downloads, so that game is cook xD")
 @bot.tree.command(name="axesinmotion", description="Affiche ce qu'est axesinmotion, selon lui")
 async def axesinmotion_cmd(interaction: discord.Interaction):
     await interaction.response.send_message("is the best game enterprise, the youtuber vicky lol gaming is famous because of it, and is known throughout the entire world 🗿!")
