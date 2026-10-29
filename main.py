@@ -66,6 +66,56 @@ async def on_message(message):
                 "sure",
                 "sure 🤝"
             ])
+        elif "capital of albania" in contenu_texte:
+            reponse = "tirana!"
+        elif "capital of germany" in contenu_texte:
+            reponse = "berlin!"
+        elif "capital of belgium" in contenu_texte:
+            reponse = "brussels!"
+        elif "capital of spain" in contenu_texte:
+            reponse = "madrid!"
+        elif "capital of france" in contenu_texte:
+            reponse = "paris!"
+        elif "capital of algeria" in contenu_texte:
+            reponse = "algiers!"
+        elif "capital of cameroon" in contenu_texte:
+            reponse = "yaounde!"
+        elif "capital of egypt" in contenu_texte:
+            reponse = "cairo!"
+        elif "capital of morocco" in contenu_texte:
+            reponse = "rabat!"
+        elif "capital of senegal" in contenu_texte:
+            reponse = "dakar!"
+        elif "capital of china" in contenu_texte:
+            reponse = "beijing!"
+        elif "capital of india" in contenu_texte:
+            reponse = "new delhi!"
+        elif "capital of japan" in contenu_texte:
+            reponse = "tokyo!"
+        elif "capital of thailand" in contenu_texte:
+            reponse = "bangkok!"
+        elif "capital of vietnam" in contenu_texte:
+            reponse = "hanoi!"
+        elif "capital of australia" in contenu_texte:
+            reponse = "canberra!"
+        elif "capital of fiji" in contenu_texte:
+            reponse = "suva!"
+        elif "capital of new zealand" in contenu_texte:
+            reponse = "wellington!"
+        elif "capital of papua new guinea" in contenu_texte:
+            reponse = "port moresby!"
+        elif "capital of vanuatu" in contenu_texte:
+            reponse = "port-vila!"
+        elif "capital of south africa" in contenu_texte:
+            reponse = "pretoria!"
+        elif "capital of ivory coast" in contenu_texte:
+            reponse = "yamoussoukro!"
+        elif "capital of madagascar" in contenu_texte:
+            reponse = "antananarivo!"
+        elif "capital of nigeria" in contenu_texte:
+            reponse = "abuja!"
+        elif "capital of tunisia" in contenu_texte:
+            reponse = "tunis!"
         elif "i need something" in contenu_texte:
             reponse = "tell me 🪎"
         elif "what game you like the most" in contenu_texte:
