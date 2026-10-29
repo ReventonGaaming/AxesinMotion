@@ -147,7 +147,7 @@ async def on_message(message):
             reponse = random.choice(["yeah🤌", "oh yeah 🔥", "yes brother"])
         elif any(phrase in contenu_texte for phrase in ["ok", "ah", "oh", "okay"]):
             reponse = random.choice(["🙃", "👀", "👍"])
-        elif any(phrase in contenu_texte for phrase in ["huh", "huhh", "what"]):
+        elif any(phrase in contenu_texte for phrase in ["huhh", "what"]):
             reponse = random.choice(["hehe", "jk", "🤌"])
         elif any(phrase in contenu_texte for phrase in ["8.0 out ?", "new ecds update ?"]):
             reponse = random.choice(["later, but peak update will coming 😏",
@@ -160,10 +160,16 @@ async def on_message(message):
             reponse = random.choice(["k", "😶", "L"])
         elif any(phrase in contenu_texte for phrase in ["hi", "hello", "hey"]):
             reponse = random.choice(["helloo", "yo" or "hey!"])
-        elif "lagaxesinmotion2" in contenu_texte :
-            reponse = "eeeelaaaaaggdhhglgflfghhh"
+        elif "lagaxesinmotion3" in contenu_texte :
+            reponse = "eeee_laaaaagg!!!!-------eEeEEE"
         elif any(phrase in contenu_texte for phrase in [lol, lool, lmao, lmfao]):
             reponse = random.choice(["hehe" or "😎"])
+        elif "capital of axesinmotion" in contenu_texte:
+            reponse = "me!"
+        elif "capital of ecds" in contenu_texte:
+            reponse = "axesinmotion 😏"
+        elif "cap" in contenu_texte:
+            random.choice(["🧢" or "nice try 😏"])
         else:
             # Réponse par défaut
             reponse = random.choice([
