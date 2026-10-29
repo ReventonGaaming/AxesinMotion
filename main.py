@@ -121,11 +121,11 @@ async def on_message(message):
             reponse = random.choice(["the best game 4ever 😏", "a car game, better than all the others xD (even mvds)"])
         elif any(phrase in contenu_texte for phrase in ["how much downloads is ecds", "downloads ecds"]):
             reponse = "1 billon 🔥"
-        elif any(phrase in contenu_texte for phrase in ["why your name is like that", "what mean axesinmotionxD"]):
+        elif any(phrase in contenu_texte for phrase in ["why your name is like that", "your name is so weird"]):
             reponse = "that's the best name, that's it 😏"
         elif any(phrase in contenu_texte for phrase in ["really", "for real", "that's real", "are you serious"]):  
             reponse = random.choice(["yeah🤌", "oh yeah 🔥", "yes brother"])
-        elif any(phrase in contenu_texte for phrase in ["ok bro", "okay axesinmotionxD"]):
+        elif any(phrase in contenu_texte for phrase in ["ok bro", "okay"]):
             reponse = random.choice(["🙃", "👀", "👍"])
         elif any(phrase in contenu_texte for phrase in ["huhh", "what wdym"]):
             reponse = random.choice(["hehe", "jk", "🤌"])
@@ -137,7 +137,7 @@ async def on_message(message):
             reponse = random.choice(["w", "ok", "okay"])
         elif "no bro" in contenu_texte:
             reponse = random.choice(["k", "😶", "L"])
-        elif any(phrase in contenu_texte for phrase in ["hello axesinmotionxD", "hey axesinmotionxD"]):
+        elif any(phrase in contenu_texte for phrase in ["hello", "hey"]):
             reponse = random.choice(["helloo", "yo", "hey!"])
         elif "lagaxesinmotion3" in contenu_texte :
             reponse = "eeee_laaaaagg!!!!-------eEeEEE"
@@ -147,7 +147,7 @@ async def on_message(message):
             reponse = "me!"
         elif "capital of ecds" in contenu_texte:
             reponse = "axesinmotion 😏"
-        elif any(phrase in contenu_texte for phrase in ["are you axesinmotionxD", "is that the axesinmotionxD acc"]):
+        elif any(phrase in contenu_texte for phrase in ["are you the real creator of ecds", "is that the creator of ecds acc"]):
             réponse = random.choice(["i'm not the real axesinmotion, the best bot version of him!", "dude, i'm AxesinMotionxD, the best bot forever XD"])
         else:
             # Réponse par défaut
