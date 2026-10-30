@@ -162,16 +162,38 @@ async def on_message(message):
 # ==========================================
 # 4. COMMANDES SLASH
 # ==========================================
+
+@bot.tree.command(name="questions", description="Affiche toutes les questions et réponses du bot")
+async def questions_cmd(interaction: discord.Interaction):
+    # Liste de tes questions et réponses (tu pourras l'agrandir facilement ici)
+    qa_list = [
+        ("Are you the creator of ecds", "i'm not the real axesinmotion, the best bot version of him!"),
+        ("capital of france", "paris"),
+        ("mvds", "Mvds ? Hmm i think it's a pretty good game, but everyone has their opinion!"),
+        ("how are you", "good / happy cause ecds...")
+    ]
+    
+    # Construction du message texte
+    texte = "**📋 Liste des questions / réponses de mon code :**\n"
+    for question, reponse in qa_list:
+        texte += f"• **Question :** `{question}` ➔ **Réponse :** `{reponse}`\n"
+    
+    # ephemeral=True rend le message visible UNIQUEMENT par la personne qui a tapé la commande
+    await interaction.response.send_message(texte, ephemeral=True)
+    
 @bot.tree.command(name="ping", description="Vérifie la latence du bot")
 async def ping(interaction: discord.Interaction):
     latency = round(bot.latency * 1000)
     await interaction.response.send_message(f"Pong ! Latence de la passerelle : {latency} ms.")
+    
 @bot.tree.command(name="greeting", description="Dis bonjour au bot")
 async def bonjour(interaction: discord.Interaction):
     await interaction.response.send_message("hi, i'm axesinmotionxD, let's chat!")
+    
 @bot.tree.command(name="mvds", description="Affiche ce que pense le bot du jeu mvds")
 async def mvds_cmd(interaction: discord.Interaction):
     await interaction.response.send_message("mvds ? Humm i think it's a pretty good game, but ecds is 1b downloads, so that game is cook xD")
+    
 @bot.tree.command(name="axesinmotion", description="Affiche ce qu'est axesinmotion, selon lui")
 async def axesinmotion_cmd(interaction: discord.Interaction):
     await interaction.response.send_message("is the best game enterprise, the youtuber vicky lol gaming is famous because of it, and is known throughout the entire world 🗿!")
