@@ -123,19 +123,19 @@ async def on_message(message):
             reponse = "1 billon 🔥"
         elif any(phrase in contenu_texte for phrase in ["why your name is like that", "your name is so weird"]):
             reponse = "that's the best name, that's it 😏"
-        elif any(phrase in contenu_texte for phrase in ["really", "for real", "that's real", "are you serious"]):  
+        elif any(phrase in contenu_texte for phrase in ["really", "for real", "is that real", "are you serious"]):  
             reponse = random.choice(["yeah🤌", "oh yeah 🔥", "yes brother"])
-        elif any(phrase in contenu_texte for phrase in ["ok bro", "okay"]):
+        elif any(phrase in contenu_texte for phrase in ["ok", "okay"]):
             reponse = random.choice(["🙃", "👀", "👍"])
         elif any(phrase in contenu_texte for phrase in ["huhh", "what wdym"]):
             reponse = random.choice(["hehe", "jk", "🤌"])
         elif any(phrase in contenu_texte for phrase in ["8.0 out ?", "new ecds update ?"]):
             reponse = random.choice(["later, but peak update will coming 😏", "i just can tell you the update will be peak!"])
-        elif any(phrase in contenu_texte for phrase in ["are you the creator of ecds", "is that the creator of ecds acc"]):
-            reponse = random.choice(["i'm not the real axesinmotion, the best bot version of him!", "dude, i'm AxesinMotionxD, the best bot forever XD"])
-        elif "yoo" in contenu_texte:
+        elif any(phrase in contenu_texte for phrase in ["are you the creator of ecds", "is that the creator of ecds acc", "are you axesinmotion"]):
+            reponse = random.choice(["i'm not the real axesinmotion, but the best bot version of him!", "dude, i'm AxesinMotionxD, the best bot forever XD"])
+        elif "yo" in contenu_texte:
             reponse = random.choice(["yo!", "hi, what's up ?", "hey!"])
-        elif "yess" in contenu_texte:
+        elif "yes" in contenu_texte:
             reponse = random.choice(["w", "ok", "okay"])
         elif "no bro" in contenu_texte:
             reponse = random.choice(["k", "😶", "L"])
@@ -143,9 +143,9 @@ async def on_message(message):
             reponse = random.choice(["helloo", "yo", "hey!"])
         elif "lagaxesinmotion3" in contenu_texte :
             reponse = "eeee_laaaaagg!!!!-------eEeEEE"
-        elif any(phrase in contenu_texte for phrase in ["lol wdym", "lmao", "lmfao"]):
+        elif any(phrase in contenu_texte for phrase in ["lol", "lmao", "lmfao"]):
             reponse = random.choice(["hehe", "😎"])
-        elif "capital of axesinmotionxD" in contenu_texte:
+        elif "capital of axesinmotion" in contenu_texte:
             reponse = "me!"
         elif "capital of ecds" in contenu_texte:
             reponse = "axesinmotion 😏"
