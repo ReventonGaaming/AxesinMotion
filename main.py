@@ -131,7 +131,7 @@ async def on_message(message):
             reponse = random.choice(["hehe", "jk", "🤌"])
         elif any(phrase in contenu_texte for phrase in ["8.0 out ?", "new ecds update ?"]):
             reponse = random.choice(["later, but peak update will coming 😏", "i just can tell you the update will be peak!"])
-        elif any(phrase in contenu_texte for phrase in ["are you the creator of ecds", "is that the creator of ecds acc", "are you axesinmotion"]):
+        elif any(phrase in contenu_texte for phrase in ["are you the creator of ecds", "is that the creator of ecds acc", "are you axesinmotion", "you created ecds"]):
             reponse = random.choice(["i'm not the real axesinmotion, but the best bot version of him!", "dude, i'm AxesinMotionxD, the best bot forever XD"])
         elif "yo" in contenu_texte:
             reponse = random.choice(["yo!", "hi, what's up ?", "hey!"])
@@ -151,6 +151,12 @@ async def on_message(message):
             reponse = "axesinmotion 😏"
         elif "bro" in contenu_texte:
             reponse = random.choice(["what", "wha"])
+        elif "hi" in contenu_texte:
+            reponse = random.choice(["hi👋", "hii"])
+        elif "of course" in contenu_texte:
+            reponse = (["yay 👏, what you want to talk?", "okay! so what for chatting ?"])
+        elif "idk" in contenu_texte:
+            reponse = (["hummm, ok.. do you know axesinmotion team is real peak?", "oh.. do you know the capital of france is paris?"])
         
         else:
             # Réponse par défaut
