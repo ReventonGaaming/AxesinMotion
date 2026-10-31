@@ -41,9 +41,20 @@ async def on_ready():
         print(f"Erreur de synchronisation : {e}")
     print(f'Connecté en tant que {bot.user.name} !')
 
-# ==========================================
-# 3. GESTION DES MESSAGES AUTOMATIQUES
-# ==========================================
+# ================================================
+# 3. GESTION DES MESSAGES AUTOMATIQUES ET DICTIONNAIRE
+# ================================================
+
+# Dictionnaire central de toutes tes questions et réponses
+QA_DICT = {
+    "are you the creator of ecds": "i'm not the real axesinmotion, the best bot version of him!",
+    "capital of france": "paris",
+    "mvds": "Mvds ? Hmm i think it's a pretty good game, but everyone has their opinion!",
+    "how are you": "good / happy cause ecds...",
+    "of course": "yay , what you want to talk?",
+    "idk": "hummm, ok.. do you know axesinmotion team is real peak?"
+}
+
 @bot.event
 async def on_message(message):
     # Ignorer les messages envoyés par le bot lui-même
@@ -207,6 +218,4 @@ async def axesinmotion_cmd(interaction: discord.Interaction):
 import os
 
 TOKEN = os.getenv("DISCORD_TOKEN")
-bot.run(TOKEN)
-
 bot.run(TOKEN)
