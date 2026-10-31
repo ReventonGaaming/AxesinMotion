@@ -211,4 +211,9 @@ async def axesinmotion_cmd(interaction: discord.Interaction):
 # ==========================================
 
 # Récupération sécurisée du token via les variables d'environnement
+import os
+
+TOKEN = os.getenv("DISCORD_TOKEN")
+bot.run(TOKEN)
+
 bot.run(TOKEN)
