@@ -181,17 +181,6 @@ async def on_message(message):
 # ==========================================
 # 4. COMMANDES SLASH
 # ==========================================
-
-@bot.tree.command(name="questions", description="Affiche toutes les questions et réponses du bot")
-async def questions_cmd(interaction: discord.Interaction):
-    texte = "**entire list questions/replys:**\n"
-    
-    # Elle récupère tout de manière automatique !
-    for question, reponse in QA_DICT.items():
-        texte += f"• **Question :** `{question}` ➔ **Réponse :** `{reponse}`\n"
-    
-    # ephemeral=True rend le message visible UNIQUEMENT par la personne qui a tapé la commande
-    await interaction.response.send_message(texte, ephemeral=True)
     
 @bot.tree.command(name="ping", description="Vérifie la latence du bot")
 async def ping(interaction: discord.Interaction):
