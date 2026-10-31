@@ -173,17 +173,10 @@ async def on_message(message):
 
 @bot.tree.command(name="questions", description="Affiche toutes les questions et réponses du bot")
 async def questions_cmd(interaction: discord.Interaction):
-    # Liste de tes questions et réponses (tu pourras l'agrandir facilement ici)
-    qa_list = [
-        ("Are you the creator of ecds", "i'm not the real axesinmotion, the best bot version of him!"),
-        ("capital of france", "paris"),
-        ("mvds", "Mvds ? Hmm i think it's a pretty good game, but everyone has their opinion!"),
-        ("how are you", "good / happy cause ecds...")
-    ]
+    texte = "**entire list questions/replys:**\n"
     
-    # Construction du message texte
-    texte = "**📋 Liste des questions / réponses de mon code :**\n"
-    for question, reponse in qa_list:
+    # Elle récupère tout de manière automatique !
+    for question, reponse in QA_DICT.items():
         texte += f"• **Question :** `{question}` ➔ **Réponse :** `{reponse}`\n"
     
     # ephemeral=True rend le message visible UNIQUEMENT par la personne qui a tapé la commande
