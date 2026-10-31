@@ -149,6 +149,8 @@ async def on_message(message):
             reponse = "me!"
         elif "capital of ecds" in contenu_texte:
             reponse = "axesinmotion 😏"
+        elif "bro" in contenu_texte:
+            reponse = random.choice(["what", "wha"])
         
         else:
             # Réponse par défaut
