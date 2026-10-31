@@ -137,7 +137,7 @@ async def on_message(message):
             reponse = random.choice(["yo!", "hi, what's up ?", "hey!"])
         elif "yes" in contenu_texte:
             reponse = random.choice(["w", "ok", "okay"])
-        elif "no bro" in contenu_texte:
+        elif "no" in contenu_texte:
             reponse = random.choice(["k", "😶", "L"])
         elif any(phrase in contenu_texte for phrase in ["hello", "hey"]):
             reponse = random.choice(["helloo", "yo", "hey!"])
@@ -151,7 +151,7 @@ async def on_message(message):
             reponse = "axesinmotion 😏"
         elif "bro" in contenu_texte:
             reponse = random.choice(["what", "wha"])
-        elif "hi" in contenu_texte:
+        elif any(phrase in contenu_texte for phrase in ["hi", "hai"]):
             reponse = random.choice(["hi👋", "hii"])
         elif "of course" in contenu_texte:
             reponse = (["yay 👏, what you want to talk?", "okay! so what for chatting ?"])
