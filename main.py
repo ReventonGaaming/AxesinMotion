@@ -162,6 +162,8 @@ async def on_message(message):
             reponse = "axesinmotion 😏"
         elif "bro" in contenu_texte:
             reponse = random.choice(["what", "wha"])
+        elif "what's up" in contenu_texte:
+            reponse = random.choice(["bro i'm feeling so good, ecds hit 1b recently, that's freaking crazy!", "goood, what's up?"])
         elif any(phrase in contenu_texte for phrase in ["hi", "hai"]):
             reponse = random.choice(["hi👋", "hii"])
         elif "of course" in contenu_texte:
