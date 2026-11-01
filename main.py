@@ -45,16 +45,6 @@ async def on_ready():
 # 3. GESTION DES MESSAGES AUTOMATIQUES ET DICTIONNAIRE
 # ================================================
 
-# Dictionnaire central de toutes tes questions et réponses
-QA_DICT = {
-    "are you the creator of ecds": "i'm not the real axesinmotion, the best bot version of him!",
-    "capital of france": "paris",
-    "mvds": "Mvds ? Hmm i think it's a pretty good game, but everyone has their opinion!",
-    "how are you": "good / happy cause ecds...",
-    "of course": "yay , what you want to talk?",
-    "idk": "hummm, ok.. do you know axesinmotion team is real peak?"
-}
-
 @bot.event
 async def on_message(message):
     # Ignorer les messages envoyés par le bot lui-même
@@ -63,11 +53,10 @@ async def on_message(message):
 
     contenu_texte = message.content.lower()
 
-    # Le bot réagit s'il est mentionné ou si "axesinmotion" / des mots clés sont dans le texte
+    # Le bot réagit s'il est mentionné
     is_mentioned = bot.user in message.mentions
-    has_keyword = "axesinmotion" in contenu_texte
 
-    if is_mentioned or has_keyword:
+    if is_mentioned:
         reponse = None
 
         if "how are you" in contenu_texte:
