@@ -159,6 +159,12 @@ async def on_message(message):
             reponse = random.choice(["yay 👏, what you want to talk?", "okay! so what for chatting ?"])
         elif "idk" in contenu_texte:
             reponse = random.choice(["hummm, ok.. do you know axesinmotion team is real peak?", "oh.. do you know the capital of france is paris?"])
+        elif "ragebait" in contenu_texte:
+            reponse = "I'M NOT RAGEBAIT !! i am kind"
+        elif any(phrase in contenu_texte for phrase in ["stfu", "shut up", "fuck you", "i will kill you"]):
+            reponse = random.choice(["dude... you're so ragebait lol", "@lv10 damn, my dog is talking.. i'll give him some kibbles.."])
+        elif any(phrase in contenu_texte for phrase in ["oh my god, oh my goo"]):
+            reponse = random.choice(["don't be surprised, ecds fan 😏", "lol", "jk"])
         
         else:
             # Réponse par défaut
@@ -189,6 +195,10 @@ async def mvds_cmd(interaction: discord.Interaction):
 @bot.tree.command(name="axesinmotion", description="Affiche ce qu'est axesinmotion, selon lui")
 async def axesinmotion_cmd(interaction: discord.Interaction):
     await interaction.response.send_message("is the best game enterprise, the youtuber vicky lol gaming is famous because of it, and is known throughout the entire world 🗿!")
+
+@bot.tree.command(name="ragebait", description="Affiche si le bot est ragebait")
+async def ragebait_cmd(interaction: discord.Interaction):
+    await interaction.response.send_message("no i'm not ! I'm a kind bot, i know this is what you meant 🫵")
 
 # ==========================================
 # 5. LANCEMENT DU BOT
