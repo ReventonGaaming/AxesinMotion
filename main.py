@@ -198,7 +198,7 @@ async def axesinmotion_cmd(interaction: discord.Interaction):
 
 @bot.tree.command(name="ragebait", description="Affiche si le bot est ragebait")
 async def ragebait_cmd(interaction: discord.Interaction):
-    await interaction.response.send_message("no i'm not ! I'm a kind bot, i know this is what you meant 🫵")
+    await interaction.response.send_message("no, i'm not ! I'm a kind bot, i know this is what you meant 🫵")
 
 # ==========================================
 # 5. LANCEMENT DU BOT
