@@ -161,7 +161,7 @@ async def on_message(message):
             reponse = random.choice(["hummm, ok.. do you know axesinmotion team is real peak?", "oh.. do you know the capital of france is paris?"])
         elif "ragebait" in contenu_texte:
             reponse = "I'M NOT RAGEBAIT !! i am kind"
-        elif any(phrase in contenu_texte for phrase in ["stfu", "shut up", "fuck you", "i will kill you"]):
+        elif any(phrase in contenu_texte for phrase in ["stfu", "shut up"]):
             reponse = random.choice(["dude... you're so ragebait lol", "@lv10 damn, my dog is talking.. i'll give him some kibbles.."])
         elif any(phrase in contenu_texte for phrase in ["oh my god, oh my goo"]):
             reponse = random.choice(["don't be surprised, ecds fan 😏", "lol", "jk"])
