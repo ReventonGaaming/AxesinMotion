@@ -165,10 +165,18 @@ async def on_message(message):
             reponse = random.choice(["dude... you're so ragebait lol", "@lv10 damn, my dog is talking.. i'll give him some kibbles.."])
         elif any(phrase in contenu_texte for phrase in ["oh my god, oh my goo"]):
             reponse = random.choice(["don't be surprised, ecds fan 😏", "lol", "jk"])
-        
+        elif any(phrase in contenu_texte for phrase in ["six-seven", "67"]):
+            reponse = random.choice(["lol wdym", "@lv5 guys i saw the 67 guy !"])
+        elif "son" in contenu_texte:
+            reponse = random.choice(["i think that deserves a thunderous round of applause", "what a dad"])
+        elif any(phrase in contenu_texte for phrase in ["wsp", "what's up"]
+            reponse = random.choice(["hello", "what + s + up = what's up. wth"])
+        elif any(phrase in contenu_texte for phrase in ["hru", "uru ?"]
+            reponse = random.choice(["???", "bro what ??"])
+    
         else:
             # Réponse par défaut
-            reponse = random.choice(["yo, do you want to talking", "did you pinged me ?", "Hey 👋", "did someone pinged me ?"])
+            reponse = random.choice(["do you want to talking ?", "did you pinged me ?", "Hey 👋", "did someone pinged me ?"])
 
         if reponse:
             await message.channel.send(reponse)
