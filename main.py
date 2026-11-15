@@ -169,9 +169,9 @@ async def on_message(message):
             reponse = random.choice(["lol wdym", "@lv5 guys i saw the 67 guy !"])
         elif "son" in contenu_texte:
             reponse = random.choice(["i think that deserves a thunderous round of applause", "what a dad"])
-        elif any(phrase in contenu_texte for phrase in ["wsp", "what's up"]
+        elif any(phrase in contenu_texte for phrase in ["wsp", "what's up"]):
             reponse = random.choice(["hello", "what + s + up = what's up. wth"])
-        elif any(phrase in contenu_texte for phrase in ["hru", "uru ?"]
+        elif any(phrase in contenu_texte for phrase in ["hru", "uru ?"]):
             reponse = random.choice(["???", "bro what ??"])
     
         else:
