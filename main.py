@@ -175,7 +175,7 @@ async def on_message(message):
             reponse = random.choice(["???", "bro what ??"])
         elif "bruh" in contenu_texte:
             reponse = "bruh"
-        elif "???" in contenu_texte:
+        elif "what ???" in contenu_texte:
             reponse = random.choice(["bro asking a question", "titi kaka"]):
         elif "you dumb" in contenu_texte:
             reponse = random.choice(["ok son", "@lv5 guys i saw the more clever guy on the server !"])
